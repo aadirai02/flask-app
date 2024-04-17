@@ -41,7 +41,7 @@ def lpa():
 def uttam():
     name = request.args.get('name')
     if name:
-        logging.info(f"{name} wants to work under Uttam Undale")
+        logging.info(f"Aaditya wants to work under Uttam Undale")
     return render_template('uttam.html', name=name)
 
 # Define a route for internal server error (500)
@@ -67,4 +67,4 @@ def handle_undefined_paths(path):
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
